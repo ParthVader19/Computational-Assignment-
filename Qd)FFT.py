@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 T_max=7
 T_min=-7
-N=0.01
+N=0.1
 t=np.arange(T_min,T_max,step=N)
 #if np.log2((T_max-T_min)/N).is_integer()==False:
 #    b=(T_max-T_min)/N
@@ -22,12 +22,12 @@ for i in t:
 
 g=[]   
 for i in t:
-#    a=np.exp(-i**2 /2)/np.sqrt(2*np.pi)
-#    g.append(a)
-    if i>=0 and i<=1:
-        g.append(1)
-    else:
-        g.append(0)
+    a=np.exp(-i**2 /2)/np.sqrt(2*np.pi)
+    g.append(a)
+#    if i>=0 and i<=1:
+#        g.append(1)
+#    else:
+#        g.append(0)
 
 
 w_max=1/(2*N)
