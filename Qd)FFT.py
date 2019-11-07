@@ -2,6 +2,11 @@ import numpy as np
 import numpy.fft as fft
 import matplotlib.pyplot as plt
 
+"""
+Things to do:
+    -figure out the shifting of the convolution; fftshift apparently fixes things
+"""
+
 T_max=7
 T_min=-7
 N=0.1
@@ -22,12 +27,12 @@ for i in t:
 
 g=[]   
 for i in t:
-    a=np.exp(-i**2 /2)/np.sqrt(2*np.pi)
-    g.append(a)
-#    if i>=0 and i<=1:
-#        g.append(1)
-#    else:
-#        g.append(0)
+#    a=np.exp(-i**2 /2)/np.sqrt(2*np.pi)
+#    g.append(a)
+    if i>=0 and i<=1:
+        g.append(1)
+    else:
+        g.append(0)
 
 
 w_max=1/(2*N)
@@ -79,5 +84,6 @@ plt.grid()
 #plt.plot(t,G_inv,'+')
 
 plt.show()
+
     
 
