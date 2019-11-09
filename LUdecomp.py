@@ -103,10 +103,10 @@ eg1=[[3,1,0,0,0],
 eg2=[[-4,1],
      [15,-5]]
 
-L,U,detA=LUdcomp(eg2)
+L,U,detA=LUdcomp(eg1)
 C=combine(L,U)
-#print("U=",U)
-#print("L=",L)  
+print("U=",U)
+print("L=",L)  
 #print("C=",C)
 #print(detA)
 
